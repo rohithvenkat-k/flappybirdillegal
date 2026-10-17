@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://comrhk6v66ct2"]
+
+[ext_resource type="Script" uid="uid://bskqthu0b63m6" path="res://scripts/poop.gd" id="1_q35vq"]
+[ext_resource type="Texture2D" uid="uid://c4lepwj380712" path="res://assets/sprites/obstacle/poop_PNG2.png" id="2_bc47e"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q35vq"]
+radius = 16.0
+
+[node name="Poop" type="Area2D" unique_id=1995896381]
+script = ExtResource("1_q35vq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=671888505]
+position = Vector2(5.722046e-05, 3.8146973e-06)
+shape = SubResource("CircleShape2D_q35vq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1363792342]
+position = Vector2(0, -1.7500024)
+scale = Vector2(0.02443001, 0.033522196)
+texture = ExtResource("2_bc47e")

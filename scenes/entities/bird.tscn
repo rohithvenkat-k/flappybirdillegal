@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://chro7vg08li1t"]
+
+[ext_resource type="Script" uid="uid://dv4ruyha1wsrf" path="res://scripts/bird.gd" id="1_1sp12"]
+[ext_resource type="Texture2D" uid="uid://btn8i2eet4ufq" path="res://assets/sprites/bird/Bird01_00.png" id="2_bsnab"]
+[ext_resource type="Texture2D" uid="uid://6gflapsfkr3i" path="res://assets/sprites/bird/Bird01_01.png" id="3_u0ql5"]
+[ext_resource type="Texture2D" uid="uid://dsj1a1ljrco0q" path="res://assets/sprites/bird/Bird01_02.png" id="4_7hk7v"]
+[ext_resource type="Texture2D" uid="uid://bs8llp023gbxn" path="res://assets/sprites/bird/Bird01_03.png" id="5_lwrkh"]
+[ext_resource type="Texture2D" uid="uid://b3t6u53tllclf" path="res://assets/sprites/bird/Bird01_04.png" id="6_kvvyw"]
+[ext_resource type="Texture2D" uid="uid://cixqn0e5yt62e" path="res://assets/sprites/bird/Bird01_05.png" id="7_d4yel"]
+[ext_resource type="Texture2D" uid="uid://c2n06tg4bnxn6" path="res://assets/sprites/bird/Bird01_06.png" id="8_ghehe"]
+[ext_resource type="Texture2D" uid="uid://c633lygb26mtv" path="res://assets/sprites/bird/Bird01_07.png" id="9_brxur"]
+[ext_resource type="Texture2D" uid="uid://bqp3niaaj48aa" path="res://assets/sprites/bird/Bird01_08.png" id="10_axdy1"]
+[ext_resource type="Texture2D" uid="uid://u2nwomgokxc3" path="res://assets/sprites/bird/Bird01_09.png" id="11_gbveg"]
+[ext_resource type="Texture2D" uid="uid://dl7ajddylq1v2" path="res://assets/sprites/bird/Bird01_10.png" id="12_wql4i"]
+[ext_resource type="Texture2D" uid="uid://b7pseouy8b8pu" path="res://assets/sprites/bird/Bird01_11.png" id="13_l6f1o"]
+[ext_resource type="Texture2D" uid="uid://b6sas3bbds1wv" path="res://assets/sprites/bird/Bird01_12.png" id="14_8wikr"]
+[ext_resource type="Texture2D" uid="uid://bvdc8cd4x6xer" path="res://assets/sprites/bird/Bird01_13.png" id="15_5d44l"]
+[ext_resource type="Texture2D" uid="uid://bwtdvrfb608uj" path="res://assets/sprites/bird/Bird01_14.png" id="16_q7ajj"]
+[ext_resource type="Texture2D" uid="uid://btk2284abh12c" path="res://assets/sprites/bird/Bird01_15.png" id="17_0jgcv"]
+[ext_resource type="Texture2D" uid="uid://cp68ibgrgak8h" path="res://assets/sprites/bird/Bird01_16.png" id="18_k1akt"]
+[ext_resource type="Texture2D" uid="uid://dikw2cqsx5826" path="res://assets/sprites/bird/Bird01_17.png" id="19_y762v"]
+[ext_resource type="Texture2D" uid="uid://yy75fq57v5dj" path="res://assets/sprites/bird/Bird01_18.png" id="20_ji47l"]
+[ext_resource type="Texture2D" uid="uid://bj0pjngi5vinu" path="res://assets/sprites/bird/Bird01_19.png" id="21_yja1b"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ax70j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_bsnab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_u0ql5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7hk7v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_lwrkh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_kvvyw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_d4yel")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ghehe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_brxur")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_axdy1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_gbveg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_wql4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_l6f1o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_8wikr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_5d44l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_q7ajj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_0jgcv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_k1akt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_y762v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ji47l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_yja1b")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 24.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7p8s6"]
+radius = 31.0
+
+[node name="Bird" type="CharacterBody2D" unique_id=1895994610]
+script = ExtResource("1_1sp12")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1289507558]
+sprite_frames = SubResource("SpriteFrames_ax70j")
+animation = &"fly"
+autoplay = "fly"
+frame_progress = 0.192492
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=977202024]
+position = Vector2(9, 3)
+shape = SubResource("CircleShape2D_7p8s6")

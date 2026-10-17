@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cgwyhv5hxjh5n"]
+
+[ext_resource type="Script" uid="uid://o1c5u7ed5mlq" path="res://scripts/main.gd" id="1_72ix8"]
+[ext_resource type="PackedScene" uid="uid://chro7vg08li1t" path="res://scenes/entities/bird.tscn" id="2_2vj2h"]
+[ext_resource type="PackedScene" uid="uid://b8xanc8ysilk4" path="res://scenes/entities/pipe.tscn" id="3_y0acb"]
+[ext_resource type="PackedScene" uid="uid://comrhk6v66ct2" path="res://scenes/entities/poop.tscn" id="4_j4d2a"]
+
+[node name="Main" type="Node2D" unique_id=469977494]
+script = ExtResource("1_72ix8")
+pipe_scene = null
+poop_scene = null
+pipe_spawn_x = null
+poop_burst_count = null
+poop_burst_delay = null
+
+[node name="Timer" type="Timer" parent="." unique_id=622507114]
+wait_time = 1.5
+autostart = true
+
+[node name="Bird" parent="." unique_id=1895994610 instance=ExtResource("2_2vj2h")]
+position = Vector2(109, 226)
+
+[node name="Pipe" parent="." unique_id=1118025863 instance=ExtResource("3_y0acb")]
+position = Vector2(681, 1)
+
+[node name="Poop" parent="." unique_id=1995896381 instance=ExtResource("4_j4d2a")]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
